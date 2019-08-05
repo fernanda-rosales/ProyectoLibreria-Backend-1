@@ -1,4 +1,4 @@
-package edu.uacm.com.security.model;
+package mx.edu.uacm.domain;
 
 import java.util.ArrayList;
 import java.util.List;
