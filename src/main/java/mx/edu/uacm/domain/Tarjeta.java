@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Data
@@ -18,7 +16,7 @@ public class Tarjeta {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private @Getter @Setter Long id;
+	private Long id;
 
 	@Column(length = 45)
 	private String numeroTarjeta;
