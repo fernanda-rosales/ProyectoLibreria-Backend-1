@@ -7,14 +7,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 public class Tarjeta {
 
 	@Id
@@ -23,10 +21,10 @@ public class Tarjeta {
 	private @Getter @Setter Long id;
 
 	@Column(length = 45)
-	private @Getter @Setter String numeroTarjeta;
+	private String numeroTarjeta;
 
-	private @Getter @Setter double sobrecoste;
-	
+	private double sobrecoste;
+
 	@ManyToOne
 	private MetodoDePago metodoDePago;
 
