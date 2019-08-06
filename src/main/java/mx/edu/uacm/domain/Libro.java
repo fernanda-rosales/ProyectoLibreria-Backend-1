@@ -5,33 +5,46 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 public class Libro {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private @Getter	@Setter Long id;
-	
-	private @Getter	@Setter int isbn;
-	
+	private Long id;
+
+	private int isbn;
+
 	@Column(length = 45)
-	private @Getter	@Setter String nombre;
-	
+	private String nombre;
+
 	@Column(length = 45)
-	private @Getter	@Setter String autor;
-	
+	private String autor;
+
 	@Column(length = 500)
-	private @Getter	@Setter String sipnosis;
+	private String sipnosis;
+
+	private byte descatalogado;
+
+	@ManyToOne
+	private Categoria categoria;
 	
-	private @Getter	@Setter byte descatalogado;
+	@ManyToOne
+	private Publicacion publicacion;
+
+	@ManyToOne
+	private Valoracion valoracion;
+
+	@ManyToOne
+	private Stock stock;
 	
+	@ManyToOne
+	private Edicion edicion;
+
 	
+
 }
