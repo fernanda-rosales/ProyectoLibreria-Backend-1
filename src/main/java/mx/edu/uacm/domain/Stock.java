@@ -28,8 +28,8 @@ public class Stock {
 	
 	private @Getter @Setter  int cantidadEjemplar;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "Stock_idStock")
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "stock")
+	
 	private List<Libro> libros =new ArrayList<Libro>();
 	
 }

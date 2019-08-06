@@ -27,8 +27,7 @@ public class Valoracion {
 	
 	private @Getter @Setter double valoracion;
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "valoracion_idValoacion")
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "valoracion")
 	private List<Libro> libros=new ArrayList<Libro>();
 
 }
