@@ -42,8 +42,7 @@ public class Libro {
 	@ManyToOne
 	private Stock stock;
 	
-	@ManyToOne
-	private Edicion edicion;
+	
 
 	
 
