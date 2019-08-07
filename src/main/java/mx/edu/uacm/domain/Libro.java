@@ -30,21 +30,4 @@ public class Libro {
 
 	private byte descatalogado;
 
-	@ManyToOne
-	private Categoria categoria;
-	
-	@ManyToOne
-	private Publicacion publicacion;
-
-	@ManyToOne
-	private Valoracion valoracion;
-
-	@ManyToOne
-	private Stock stock;
-	
-	@ManyToOne
-	private Edicion edicion;
-
-	
-
 }
