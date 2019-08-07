@@ -9,13 +9,11 @@ import lombok.Data;
 
 @Entity
 @Data
-public class DetalleCompra {
+public class Contrarembolso {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.TABLE)
 	private Long id;
-	
-	private int cantidadComprada;
-	private double descuento;
+	private double sobreCoste;
 
 }
