@@ -37,7 +37,7 @@ public class Cliente {
 
 	@ManyToOne(fetch = FetchType.LAZY) // para que se la bidireccionalidad
 	@JoinColumn(name = "fk_clienteDireccion") // ese espara el nombre de la relacion
-	@Embedded
+
 	private Direccion direcion;
 
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true) // siempre se pondra del lado donde esta el array //

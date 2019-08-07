@@ -20,7 +20,7 @@ public class Publicacion {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "publicacion")
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Libro> libros = new ArrayList<Libro>();
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "publicacion")

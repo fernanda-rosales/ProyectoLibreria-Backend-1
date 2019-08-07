@@ -33,8 +33,7 @@ public class Libro {
 	@ManyToOne
 	private Categoria categoria;
 	
-	@ManyToOne
-	private Publicacion publicacion;
+	
 
 	@ManyToOne
 	private Valoracion valoracion;
