@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import javax.persistence.ManyToOne;
+
+
 import lombok.Data;
 
 @Entity
@@ -17,5 +20,10 @@ public class DetalleCompra {
 	
 	private int cantidadComprada;
 	private double descuento;
+
+	
+	@ManyToOne
+	private Publicacion publicacion;
+
 
 }
