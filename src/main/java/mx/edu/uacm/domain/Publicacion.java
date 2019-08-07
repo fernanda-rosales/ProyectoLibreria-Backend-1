@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 import lombok.Data;
@@ -20,9 +21,11 @@ public class Publicacion {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany
+	@JoinColumn(name = "id_Publicacion")
 	private List<Libro> libros = new ArrayList<Libro>();
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "publicacion")
+	@OneToMany
+	@JoinColumn(name = "id_Publicacion")
 	private List<DetalleCompra> detalleCompra = new ArrayList<DetalleCompra>();
 }
