@@ -20,10 +20,13 @@ public class MetodoDePago {
 	@Id
 	private Long id;
 	//duda es forzoso el join column cuando uso onetomay y tendría problema con usar el cascadeType para este ejercicio
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany()
 	private List<Transferencia> listaTransferencia=new ArrayList<Transferencia>();
 	
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany()
+	private List<Tarjeta> listaTarjeta=new ArrayList<Tarjeta>();
+	
+	@OneToMany()
 	private List<Paypal> listaPaypal=new ArrayList<Paypal>();
 	
 
