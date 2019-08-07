@@ -1,5 +1,5 @@
 package mx.edu.uacm.domain;
 
-public class ClasePrueba {
+public class Edicion {
 
 }
