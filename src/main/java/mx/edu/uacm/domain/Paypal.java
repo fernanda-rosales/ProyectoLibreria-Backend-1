@@ -7,11 +7,14 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
-@Data
 @Entity
-public class MetodoDePago {
-
+@Data
+public class Paypal {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	private Long id;
+	private String cuenta;
+	private double sobreCostePay;
+
 }
