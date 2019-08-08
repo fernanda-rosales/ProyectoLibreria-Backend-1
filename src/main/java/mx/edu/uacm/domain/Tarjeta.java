@@ -23,7 +23,6 @@ public class Tarjeta {
 
 	private double sobrecoste;
 
-	@ManyToOne
-	private MetodoDePago metodoDePago;
+	
 
 }
